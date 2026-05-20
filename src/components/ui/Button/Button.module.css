@@ -1,0 +1,66 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--typo-body-medium-font-family);
+  font-size: var(--typo-body-medium-font-size);
+  font-weight: 600;
+  line-height: var(--typo-body-medium-line-height);
+  letter-spacing: var(--typo-body-medium-letter-spacing);
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  width: 100%;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Variants ───────────────────────────────────────────────────── */
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.secondary {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+.danger {
+  background-color: var(--color-error);
+  color: var(--color-on-error);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.ghost:hover {
+  background-color: var(--color-surface-variant);
+}
+
+/* ── Desktop ────────────────────────────────────────────────────── */
+
+@media (min-width: 768px) {
+  .button {
+    width: auto;
+  }
+}

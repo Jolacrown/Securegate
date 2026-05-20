@@ -1,0 +1,41 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px 16px;
+  background-color: var(--color-background);
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-size: var(--typo-title-large-font-size);
+  font-weight: 700;
+  line-height: var(--typo-title-large-line-height);
+  letter-spacing: var(--typo-title-large-letter-spacing);
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: var(--typo-label-large-font-size);
+  line-height: var(--typo-label-large-line-height);
+  color: var(--color-on-surface-variant);
+}
+
+@media (min-width: 768px) {
+  .layout {
+    padding: 48px 24px;
+  }
+
+  .branding {
+    margin-bottom: 40px;
+  }
+}

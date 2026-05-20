@@ -1,0 +1,52 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.title {
+  font-size: var(--typo-title-medium-font-size);
+  font-weight: var(--typo-title-medium-font-weight);
+  line-height: var(--typo-title-medium-line-height);
+  letter-spacing: var(--typo-title-medium-letter-spacing);
+  color: var(--color-on-surface);
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-size: var(--typo-body-small-font-size);
+  line-height: var(--typo-body-small-line-height);
+  color: var(--color-on-surface-variant);
+}
+
+.footer a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.forgotLink {
+  display: block;
+  text-align: right;
+  font-size: var(--typo-label-large-font-size);
+  line-height: var(--typo-label-large-line-height);
+  color: var(--color-primary);
+  margin-top: -12px;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.linkButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

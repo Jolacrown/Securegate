@@ -1,0 +1,23 @@
+.alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: var(--typo-body-small-font-size);
+  font-weight: var(--typo-body-small-font-weight);
+  line-height: var(--typo-body-small-line-height);
+  letter-spacing: var(--typo-body-small-letter-spacing);
+}
+
+.error {
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.success {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+}
+
+.info {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}

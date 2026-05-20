@@ -1,0 +1,44 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id             String       @id @default(cuid())
+  email          String       @unique
+  passwordHash   String       @map("password_hash")
+  role           String       @default("USER")
+  emailVerified  DateTime?    @map("email_verified")
+  createdAt      DateTime     @default(now()) @map("created_at")
+  updatedAt      DateTime     @updatedAt @map("updated_at")
+  resetTokens    ResetToken[]
+  verifyTokens   VerificationToken[]
+
+  @@map("users")
+}
+
+model VerificationToken {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  tokenHash String   @map("token_hash")
+  expiresAt DateTime @map("expires_at")
+  used      Boolean  @default(false)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("verification_tokens")
+}
+
+model ResetToken {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  tokenHash String   @map("token_hash")
+  expiresAt DateTime @map("expires_at")
+  used      Boolean  @default(false)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("reset_tokens")
+}

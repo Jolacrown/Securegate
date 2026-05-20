@@ -1,0 +1,87 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px 16px;
+  background-color: var(--color-background);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 420px;
+  width: 100%;
+  padding: 32px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.title {
+  font-size: var(--typo-title-medium-font-size);
+  font-weight: var(--typo-title-medium-font-weight);
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.description {
+  font-size: var(--typo-body-medium-font-size);
+  color: var(--color-on-surface-variant);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.resendForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.resendButton {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  border-radius: 8px;
+  font-size: var(--typo-label-large-font-size);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.resendButton:hover {
+  opacity: 0.9;
+}
+
+.footer {
+  font-size: var(--typo-body-small-font-size);
+  color: var(--color-on-surface-variant);
+  margin: 0;
+}
+
+.footer a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
